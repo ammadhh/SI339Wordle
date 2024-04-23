@@ -1,0 +1,414 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container Styles */
+#top-words-container {
+    display: none;
+}
+.username-color {
+    color: rgb(0, 255, 60); /* Blue color, you can change it to any color you like */
+}
+#username-color{
+    color: black; /* Blue color, you can change it to any color you like */
+}
+
+h1, .mode h3, .change-mode, .main-container, .side-container, #stats-container, #top-words-container, #user-stats, #user-list {
+    border: 2px solid #007bff; /* Bright blue border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: auto; /* Adds scroll if content overflows */
+
+}
+#user-list{
+    display: block;
+    flex-direction: column; /* Adjust as needed */
+    overflow: auto; /* Adds scroll if content overflows */
+
+}
+h1, .mode {
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #007bff; /* Bright blue background */
+    color: #ffffff; /* White text */
+    font-size: 1.5em;
+}
+
+.mode h3, #curr-mode, .change-mode, .mode select, .mode button, .side-container, .main-container {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mode h3, .change-mode {
+    width: 40vw;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container, .side-container {
+    width: 40vw;
+    height: 70vh;
+    margin: 10px;
+    background-color: #fff; /* White background */
+    padding: 20px; /* Padding around the content */
+}
+
+.disabled {
+    display: none;
+}
+
+#if-user-mode, #not-user-mode {
+    text-align: center;
+}
+
+#if-user-mode *, #not-user-mode * {
+    text-align: center;
+    margin: 10px;
+}
+
+.correct {
+    background-color: #6ca965;
+}
+
+.misplaced {
+    background-color: #c8b653;
+}
+
+.wrong {
+    background-color: #000000;
+}
+
+#stats-container, #top-words-container, #user-stats {
+    height: 40%;
+    text-align: center;
+    background-color: #e9ecef; /* Light gray background */
+        /* padding: 10px 20px; */
+
+}
+
+.mode-stat, .username, .user-rank {
+    font-weight: bold;
+}
+
+.stats-line, .user-stats-line {
+    padding: 10px;
+    border: 1px solid #dee2e6; /* Light gray border */
+    margin: 10px;
+    background-color: #f8f9fa; /* Very light gray background */
+}
+
+.stats-line span, .user-stats-line span {
+    margin: 10px;
+}
+
+/* Fix for bouncy grid */
+#guesses {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0.1rem;
+    margin: 1rem 0;
+}
+
+.letter {
+    border: 1px solid #dee2e6;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 40px;
+    color:  white;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* ListWords */
+#list-words ul, ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#list-words li {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+.header {
+    width: 100%;
+    display: flex;
+    align-items: left;
+    padding: 10px;
+}
+
+.logo {
+    height: 50px; /* You can adjust this as needed */
+    align-items: left;
+}
+/* static/chat.css */
+
+.chat-room-container {
+    width: 100%; /* Increase width */
+    height: 200px; /* Decrease height */
+    margin-top: 50px; /* Move it down */
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    overflow-y: auto; /* Allows scrolling if content exceeds height */
+}
+
+#chat-box {
+    height: 100%; /* Adjust height as needed */
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+#user-input {
+    width: calc(100% - 60px); /* Adjust width as per the send button */
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* test */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for letters */
+    grid-gap: 10px; /* Spacing between cells */
+    margin-bottom: 20px; /* Spacing between boards */
+    max-width: 300px; /* Adjust as needed */
+}
+
+.letter {
+    width: 50px; /* Width of each cell */
+    height: 50px; /* Height of each cell */
+    border: 1px solid #000; /* Border for cells */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px; /* Vertically center the text */
+    font-size: 24px; /* Size of the letter */
+    background-color: #fff; /* Background color */
+    color: #000; /* Text color */
+}
+
+/* Additional styles for correct, present, and absent guesses */
+.correct {
+    width: 50px; /* Width of each cell */
+    height: 50px; /* Height of each cell */
+    border: 1px solid #000; /* Border for cells */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px; /* Vertically center the text */
+    font-size: 24px; /* Size of the letter */
+    background-color: green;
+    color: white;
+}
+
+.present {
+    width: 50px; /* Width of each cell */
+    height: 50px; /* Height of each cell */
+    border: 1px solid #000; /* Border for cells */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px; /* Vertically center the text */
+    font-size: 24px; /* Size of the letter */
+    background-color: yellow;
+    color: black;
+}
+
+.absent {
+    width: 50px; /* Width of each cell */
+    height: 50px; /* Height of each cell */
+    border: 1px solid #000; /* Border for cells */
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px; /* Vertically center the text */
+    font-size: 24px; /* Size of the letter */
+    background-color: grey;
+    color: white;
+}
+@media screen and (max-width: 600px) {
+    .letter, .correct, .present, .absent {
+        width: 30px; /* Smaller width for mobile */
+        height: 30px; /* Smaller height for mobile */
+        line-height: 30px; /* Adjust line height for mobile */
+        font-size: 18px; /* Smaller font size for mobile */
+
+    }
+}
+#timer {
+    position: fixed; /* Fixed position */
+    top: 20px; /* Positioned from the top of the viewport */
+    right: 20px; /* Positioned from the right of the viewport */
+    font-size: 40px; /* Large font size */
+    font-weight: bold; /* Bold font weight */
+    color: #000; /* Font color - change as needed */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 10px; /* Padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    z-index: 1000; /* Ensures the timer is above other elements */
+}
+@media screen and (min-width: 600px) {
+    .whole {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+
+/* Styles for screens narrower than 600px (typically mobile devices) */
+@media screen and (max-width: 599px) {
+    .whole {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+/* end test */
+
+
+
+
+
+#gameWonMessage {
+    display: none; /* Initially hidden */
+    position: fixed; /* Position it relative to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust the positioning */
+    background-color: #fff; /* Background color */
+    padding: 20px; /* Padding around the content */
+    border: 2px solid #000; /* Border for visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    text-align: center; /* Center the text inside */
+    width: 80%; /* Width of the message box */
+    max-width: 600px; /* Maximum width */
+}
+
+#gameWonMessage p {
+    font-size: 2.5em; /* Large font size */
+    font-weight: bold; /* Bold font */
+    color: #d32f2f; /* Font color */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+#gameWonMessage button {
+    font-size: 1.2em; /* Larger button text */
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    cursor: pointer; /* Cursor to indicate it's clickable */
+    border-radius: 5px; /* Rounded corners for the button */
+}
+
+/* Optionally, you can add a media query for smaller screens to adjust the font size */
+@media (max-width: 600px) {
+    #gameWonMessage p {
+        font-size: 2em; /* Slightly smaller font size on small screens */
+    }
+}
+/* @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+} */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-50px); }
+    50% { transform: translateX(50px); }
+    75% { transform: translateX(-50px); }
+}
+.always-shake {
+    animation: shake 1s ease-in-out;
+}
+
+#allboard {
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+.shake {
+    animation-name: shake;
+}
+
+
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.key, .large-key {
+    padding: 10px 15px;
+    margin: 2px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.key:active, .large-key:active {
+    background-color: #bbb;
+}
+
+.large-key {
+    flex-grow: 1;
+}
+
+.green {
+    background-color: green;
+}
+.red{
+    background-color: yellow;
+}
+.grey{
+    background-color: grey;
+}

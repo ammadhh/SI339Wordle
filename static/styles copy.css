@@ -1,0 +1,136 @@
+#top-words-container {
+    display: none;
+}
+
+h1, .mode h3, .change-mode, .main-container, .side-container, #stats-container, #top-words-container, #user-stats, #user-list {
+    border: 1px solid black;
+}
+
+h1, .mode {
+    padding: 1vh 1vw;
+    text-align: center;
+}
+
+.mode h3, #curr-mode, .change-mode, .mode select, .mode button, .side-container, .main-container {
+    display: inline-block;
+}
+
+.mode h3, .change-mode {
+    width: 40vw;
+    padding: 1vh 1vw;
+    margin: 5px;
+}
+
+
+
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container, .side-container {
+    width: 40vw;
+    height: 70vh;
+    margin: 5px;
+}
+
+.disabled {
+    display: none;
+}
+
+#if-user-mode, #not-user-mode {
+    text-align: center;
+}
+
+#if-user-mode *, #not-user-mode * {
+    text-align: center;
+    margin: 5px;
+}
+
+.correct {
+    background-color: #6ca965;
+}
+
+.misplaced {
+    background-color: #c8b653;
+}
+
+.wrong {
+    background-color: #000000;
+}
+
+#stats-container, #top-words-container, #user-stats{
+    height: 40%;
+    text-align: center;
+}
+
+.mode-stat, .username{
+    font-weight: bold;
+}
+
+.stats-line, .user-stats-line {
+    padding: 5px;
+    border: 1px solid black;
+    margin: 5px;
+    text-align: center;
+}
+
+.stats-line span {
+    margin: 5px;
+}
+.user-stats-line span{
+    margin: 5px;
+}
+
+/* Fix for bouncy grid */
+#guesses {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0.6rem;
+    margin: 1rem 0;
+}
+
+.letter {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 50px;
+    color: white;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* ListWords */
+#list-words ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* This allows items to wrap to the next line */
+    gap: 10px; /* This creates some space between the items */
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* This allows items to wrap to the next line */
+    gap: 10px; /* This creates some space between the items */
+}
+
+
+/* #list-words li {
+    /* No need for float:left; flexbox will handle the layout */
